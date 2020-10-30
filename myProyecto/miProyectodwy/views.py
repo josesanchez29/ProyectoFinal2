@@ -87,31 +87,34 @@ def formulario_registro(request):
         usuario = request.POST.get("txtnombreusuario")
         contra1 = request.POST.get("txtcontraseña1")
         contra2 = request.POST.get("txtcontraseña2")
-         
-        if contra1!=contra2:
-             sliders = Slider1.objects.all()
-             return render(request,'web/formulario_registro.html',{'msg':'Claves no Coinciden','imagenes':sliders})
-
         try:
-             usu = User.objects.get(username=usuario)
-             sliders = Slider1.objects.all()
-             return render(request,'web/formulario_registro.html',{'msg':'Usuario ya existe','imagenes':sliders})
+            usu = User.objects.get(username=usuario)
+            sliders = Slider1.objects.all()
+            return render(request,'web/formulario_registro.html',{'msg':'Usuario ya existe','imagenes':sliders})
          
         except:
-                  
+            try:
+                usu = User.objects.get(email=email)
+                sliders = Slider1.objects.all()
+                return render(request,'web/formulario_registro.html',{'msg':'Email ya existe','imagenes':sliders})
+            except :
+                
+                if contra1!=contra2:
+                 sliders = Slider1.objects.all()
+                 return render(request,'web/formulario_registro.html',{'msg':'Claves no Coinciden','imagenes':sliders})
+                
+                usu=User()
+                usu.first_name = nombre
+                usu.last_name = apellido
+                usu.email = email
+                usu.username = usuario
+                usu.set_password(contra1)
 
-            usu=User()
-            usu.first_name = nombre
-            usu.last_name = apellido
-            usu.email = email
-            usu.username = usuario
-            usu.set_password(contra1)
-
-            usu.save()
-            usu = authenticate(request, username=usuario, password=contra1)
-            login_au(request,usu)
-            sliders = Slider1.objects.all()
-            return render(request,'web/index.html',{'imagenes':sliders})
+                usu.save()
+                usu = authenticate(request, username=usuario, password=contra1)
+                login_au(request,usu)
+                sliders = Slider1.objects.all()
+                return render(request,'web/index.html',{'imagenes':sliders})
 
     sliders = Slider1.objects.all()
     return render(request,'web/formulario_registro.html',{'imagenes':sliders})
