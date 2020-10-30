@@ -10,7 +10,7 @@ class InsumosAdmin(admin.ModelAdmin):
 class Slider1Admin(admin.ModelAdmin):
     list_display = ['ident','imagen']
     search_fields = ['ident']
-    list_per_page = 3
+    list_per_page = 10
 
 class GaleriaAdmin(admin.ModelAdmin):
     list_display = ['ident','imagengaleria']
