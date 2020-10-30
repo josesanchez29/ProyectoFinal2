@@ -58,7 +58,7 @@ header {
 }
 
 #btn-menu:checked ~.menu {
-    height: 320px;
+    height: 400px;
 }
 
 
@@ -93,6 +93,7 @@ header {
 
     .menu ul {
         flex-direction: column;
+        
     }
 
     .menu li a {
@@ -100,9 +101,10 @@ header {
         
     }
 
-    header {
-        height: 100%;
-        width: 100%;
+    .bienvenida{
+        float: left;
     }
+
+    
 
 }
