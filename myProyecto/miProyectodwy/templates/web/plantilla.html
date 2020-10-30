@@ -39,10 +39,15 @@
 <body>
     <!-- CABECERA -->
     <header>
+
+
+        
           <a href="{% url 'INDEX' %}"><img src="{%static 'img/logo.png'%}" class="img-logo"></a>
+          
 
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu" class="icon-menu"></label>
+        
 
 
      
@@ -50,29 +55,36 @@
 
         <nav class="menu">
             <ul>
-                {% if user.is_authenticated %}
-             <h3 style="text-align: right ; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Bienvenido: {{user.first_name}} {{user.last_name}}</h3>
-             {% endif %}
+                 
                 <li><a href="{% url 'INDEX' %}">Inicio</a></li>
                 <li><a href="{% url 'MISIONVISION' %}">Misión / Visión</a></li>
                 <li><a href="{% url 'UBICACION' %}">Ubicación</a></li>
                 <li><a href="{% url 'GALERIA' %}">Galeria</a></li>
                 <li><a href="{% url 'FORMULARIOREGISTRO' %}">Formulario de registro</a></li>
                 <li><a href="{% url 'FORMULARIOINSUMOS' %}">Formulario de insumos</a></li>
-
+                
+                
                 {% if user.is_authenticated %}
                 <li><a href="{% url 'LOGOUT' %}">Cerrar sesion</a></li>
                 {% else %}
                 <li><a href="{% url 'LOGIN' %}">Login</a></li>
                 {% endif %}
+
+                
                 
             </ul>
-
-
+             {% if user.is_authenticated %}
+               <h3 style="text-align: right ; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Bienvenido: {{user.first_name}} {{user.last_name}}</h3>
+               {% endif %}
+            
             
                
         </nav>
+
+       
     </header>
+
+    
 
     <!-- CARRUSEL -->
     <main>
