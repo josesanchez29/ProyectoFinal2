@@ -58,7 +58,7 @@ header {
 }
 
 #btn-menu:checked ~.menu {
-    height: 320px;
+    height: 400px;
 }
 
 
@@ -99,6 +99,10 @@ header {
     .menu li a {
         display: block;
         
+    }
+
+    .bienvenida{
+        float: left;
     }
 
     
