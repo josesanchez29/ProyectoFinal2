@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lavado de autos</title>
+    <!-- Link iconos -->
+    <link rel="stylesheet" href="{%static 'iconos/css/fontello.css' %}">
+    <!-- Link cabecera menu -->
+    <link rel="stylesheet" href="{%static 'css/menu.css' %}">
+    <!-- link carrusel -->
+    <link rel="stylesheet" href="{%static 'css/estilos-index.css' %}">
+    <!-- link footer -->
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    
+     <!-- link css mision y vision -->
+    <link rel="stylesheet" href="{%static 'css/misionvision.css'%}">
+    <!-- link css ubicacion -->
+    <link rel="stylesheet" href="{%static 'css/ubicacion.css' %}">
+
+
+    <!-- Link galeria -->
+    <link rel="stylesheet" href="{%static 'css/galeria.css'  %}">
+    <!-- Conexión con lightbox css para galeria -->
+    <link rel="stylesheet" href=" {%static 'dist/css/lightbox.min.css' %}">
+    <!-- Conexión con lightbox js para galeria -->
+    <script src=" {%static 'dist/js/lightbox-plus-jquery.min.js' %}"></script>
+
+   <!-- Link formulario de registro -->
+    <link rel="stylesheet" href="{%static 'css/formulario_registro.css' %}">
+
+ <!-- Link formulario de insumos -->
+    <link rel="stylesheet" href=" {%static 'css/formulario_insumos.css' %}">
+
+
+</head>
+
+<body>
+    <!-- CABECERA -->
+    <header>
+          <a href="{% url 'INDEX' %}"><img src="{%static 'img/logo.png'%}" class="img-logo"></a>
+
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" class="icon-menu"></label>
+
+
+     
+        
+
+        <nav class="menu">
+            <ul>
+                {% if user.is_authenticated %}
+             <h3 style="text-align: right ; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Bienvenido: {{user.first_name}} {{user.last_name}}</h3>
+             {% endif %}
+                <li><a href="{% url 'INDEX' %}">Inicio</a></li>
+                <li><a href="{% url 'MISIONVISION' %}">Misión / Visión</a></li>
+                <li><a href="{% url 'UBICACION' %}">Ubicación</a></li>
+                <li><a href="{% url 'GALERIA' %}">Galeria</a></li>
+                <li><a href="{% url 'FORMULARIOREGISTRO' %}">Formulario de registro</a></li>
+                <li><a href="{% url 'FORMULARIOINSUMOS' %}">Formulario de insumos</a></li>
+
+                {% if user.is_authenticated %}
+                <li><a href="{% url 'LOGOUT' %}">Cerrar sesion</a></li>
+                {% else %}
+                <li><a href="{% url 'LOGIN' %}">Login</a></li>
+                {% endif %}
+                
+            </ul>
+
+
+            
+               
+        </nav>
+    </header>
+
+    <!-- CARRUSEL -->
+    <main>
+        <div class="slider">
+            <ul>
+            
+
+                {% for item in imagenes %}
+                <li id="{{item.ident}}"> <img src="{{item.imagen.url}}" alt=""></li>
+                {% endfor %}
+
+                
+            </ul>
+        </div>
+
+        {% block contenido  %}
+
+
+
+        {% endblock contenido  %}
+        
+        
+
+   
+    </main>
+
+    <!-- PIE DE PAGINA -->
+    <footer>
+        <div class="contenedor-footer">
+            <div class="sociales">
+                <a href="https://web.whatsapp.com"><label class="icon-whatsapp"></label></a>
+                <a href="https://www.instagram.com"><label class="icon-instagram"></label></a>
+                <a href="https://www.facebook.com/"><label class="icon-facebook"></label></a>
+            </div>
+
+            <div class="paginas">
+                <a href="{% url 'INDEX' %}">Inicio</a>
+                <a href="{% url 'MISIONVISION' %}">Misión / Visión</a>
+                <a href="{% url 'UBICACION' %}">Ubicación</a>
+                <a href="{% url 'GALERIA' %}">Galeria</a>
+                <a href="{% url 'FORMULARIOREGISTRO' %}">Formulario de registro</a>
+                <a href="{% url 'FORMULARIOINSUMOS' %}">Formulario de insumos</a>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Lavado de Autos 2020</h2>
+    </footer>
+
+
+
+{% block js %}
+
+{% endblock js %}
+</body>
+
+</html>

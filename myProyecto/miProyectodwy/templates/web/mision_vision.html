@@ -1,0 +1,50 @@
+
+
+
+   
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+
+ {% for item in lista %}
+ 
+ 
+      <!-- SERVICIOS -->
+      <section class="misionyvision">
+        <div class="contenedorr">
+            <h1 class="titulomision">¡¡¡ CONOCE MAS DE NOSOTROS !!!</h1>
+            
+            
+            <div class="misionyvision-cont">
+                <div class="misionyvision-img">
+                   <img src=" {%static 'img/mision.jpg'%}" alt="">
+                    <h3>Misión</h3>
+                    
+                    <p>{{item.mision}}</p>
+                </div>
+ 
+
+                <div class="misionyvision-img">
+                    <img src=" {%static 'img/valores.jpg'%}" alt="">
+                    <h3>Valores</h3>
+                    <p> {{item.valores}}</p>
+                    
+                    
+                </div>
+               
+
+
+                <div class="misionyvision-img">
+                    <img src=" {%static 'img/vision.jpg'%}" alt="">
+                    <h3>Visión</h3>
+                    
+                    <p>{{item.vision}}</p>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+{% endblock  %}
+
+    

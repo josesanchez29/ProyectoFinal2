@@ -1,0 +1,50 @@
+.ubicacion
+{
+
+   margin: auto;
+    height: 70%;
+    width: 60%;
+    background-color: cadetblue;
+    color: white;
+    padding: 10px;
+    margin-top: 0px;
+    border: solid black;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    border-bottom: solid 4px black;
+    border-top-left-radius: 50px;
+    border-bottom-right-radius: 70px;
+    
+}
+
+.mapa
+{
+    margin-top: 20px;
+}
+
+@media screen and (max-width:720px) {
+    .ubicacion {
+        width: 100%;
+        
+    }
+
+    .ubicacion h1 {
+        font-size: 15px;
+    }
+
+    .mapa {
+      width: 100%;
+      
+      margin: auto;
+      margin-top: 10px;
+      
+    }
+
+}
+
+
+
+
+
+

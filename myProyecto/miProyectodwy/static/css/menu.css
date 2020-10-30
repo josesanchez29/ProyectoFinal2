@@ -1,0 +1,102 @@
+/* ESTILOS GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* CABECERA */
+header {
+    width: 100%;
+    height: 85px;
+    background: #4e94ab;
+    position: fixed;
+    z-index: 100;
+}
+
+/* LOGO */
+.img-logo {
+    width: 80px;
+    margin-left: 2%;
+    padding: 2px;
+}
+
+/* MENU */
+.menu {
+    width: auto;
+    float: right;
+    margin-top: 30px;
+    margin-right: 2%;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu li {
+    list-style: none;
+}
+
+.menu li a {
+    padding: 18px;
+    text-decoration: none;
+    color: white;
+}
+
+.menu li a:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+#btn-menu {
+    display: none;
+}
+
+.icon-menu {
+    display: none;
+}
+
+#btn-menu:checked ~.menu {
+    height: 320px;
+}
+
+
+/* RESPONSIVIDAD */
+@media screen and (max-width:900px) {
+    .icon-menu {
+        display: block;
+        color: white;
+        float: right;
+        padding: 10px;
+        font-size: 30px;
+        border: 1px solid white;
+        border-radius: 5px;
+        margin-top: 14px;
+        margin-right: 16px;
+    }
+
+    .icon-menu:hover {
+        cursor: pointer;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    .menu {
+        float: left;
+        margin-top: 0;
+        width: 100%;
+        height: 0px;
+        overflow: hidden;
+        transition: all 300ms;
+        background: #4e94ab;
+    }
+
+    .menu ul {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        display: block;
+    }
+
+}

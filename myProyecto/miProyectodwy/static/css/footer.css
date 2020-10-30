@@ -1,0 +1,58 @@
+footer {
+    background: #4E94AB;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*----- REDES SOCIALES FOOTER -----*/
+
+.contenedor-footer .sociales {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.icon-whatsapp, .icon-instagram, .icon-facebook {
+    padding: 30px;
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 30px;
+}
+
+.icon-whatsapp:hover, .icon-instagram:hover, .icon-facebook:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/*----- NAVEGACIÓN FOOTER -----*/
+
+.contenedor-footer .paginas {
+    width: 100%;
+    margin: auto;
+    background: #4E94AB;
+    float: left;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.paginas a {
+    color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.paginas a:hover {
+    color: white;
+    cursor: pointer;
+}
+
+/*----- TITULO FINAL FOOTER -----*/
+.titulo-final {
+    background: black;
+    color: white;
+    font-size: 18px;
+    margin: auto;
+    text-align: center;
+}
+
+
+

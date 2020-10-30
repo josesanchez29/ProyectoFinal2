@@ -1,0 +1,19 @@
+
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+        <section>
+            <!-- GALERIA DE IMAGENES -->
+            <h2 class="titulogaleria"> REVISA NUESTRA GALERIA DE FOTOS CON NUESTROS TRABAJOS </h2>
+
+            <div class="galeria">
+                {% for item in imageness %}
+                <a id="{{item.ident}}" href="{{item.imagengaleria.url}}" data-lightbox="galeria" data-title="Nuestros Trabajos">
+                  <img src="{{item.imagengaleria.url}}"></a>
+                {% endfor %}
+
+                 
+            </div>
+        </section>
+    </main>
+{% endblock  %}

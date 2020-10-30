@@ -1,0 +1,110 @@
+/*Formuladario Registro*/
+
+
+.formularioregistro
+{
+    background-color: rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin: auto; 
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 50px;
+}
+
+.formulariotitulo
+{
+    
+    background-color: #4e94ab;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: solid 4px black;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+
+}
+.contenedorinput
+{
+  
+    padding: 10px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+input
+{
+  font-family: 'Times New Roman', Times, serif;
+  text-align: center;
+  padding: 10px;
+  font-size: 18px;
+  border-radius: 96px;
+  border: solid 3px #4e94ab;
+  margin-bottom: 12px;
+}
+
+.col-100
+{
+    width: 50%;
+}
+.col-101
+{
+   height: 90px;
+    width: 50%;
+    
+  
+}
+
+.botonregistrar
+{
+    background-color: green;
+    color: white;
+    margin: auto;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: solid 1px green;
+    
+}
+
+
+
+.botonregistrar:hover
+{
+    transform: scale(1.1);
+}
+
+.botonlimpiar
+{
+    background-color: lightslategray;
+    color: white;
+    margin: auto;
+    padding: 10px 25px;
+    cursor: pointer;
+    border: solid 3px lightslategray;
+}
+
+.botonlimpiar:hover
+{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width:1080px) {
+    
+    .formulariotitulo {
+        font-size: 20px;
+    }
+
+    .col-100 {
+      width: 100%;
+      margin: auto;
+      margin-bottom: 12px;
+    }
+
+    .col-101 {
+        width: 100%;
+        margin: auto;
+        margin-bottom: 12px;
+      }
+}
+

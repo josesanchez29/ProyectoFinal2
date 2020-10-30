@@ -1,0 +1,116 @@
+
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+        <!-- FORMULARIO -->
+        <div class="contenedor">
+
+
+            <!--CONTENIDO DE LA PAGINA-->
+            <div id="contenido">
+                <!--SECCIONES-->
+                <div id="section2">
+
+                    <div>
+                        <script src="{%static 'js/script.js' %}"></script>
+                        
+                        <form action="" method="POST" >
+                        {% csrf_token %}
+
+                            <h2 class="formulariotitulo"> Registrate con nosotros para una mejor experiencia</h2>
+
+                            <div class="contenedorinput">
+
+                                
+                                <tr>
+                                
+                                    <td>
+                                        <input class="col-100" type="text" name="txtnombre" minlength="3" maxlength="80"
+                                            placeholder="Ingrese Su Nombre" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="text" name="txtapellido" minlength="3"
+                                            maxlength="80" placeholder="Ingrese Su apellido" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="email" name="txtemail"
+                                            placeholder="Ingrese Su Email" required>
+                                    </td>
+                                </tr>
+                               
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="text" name="txtnombreusuario" minlength="8"
+                                            placeholder="Ingrese Su Nombre De Usuario" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="password" name="txtcontraseña1" minlength="8"
+                                            placeholder="Ingrese Contraseña" required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="password" name="txtcontraseña2" minlength="8"
+                                            placeholder="Repita Contraseña" required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Registar" class="botonregistrar">
+                                        <input type="reset" value="Limpiar" class="botonlimpiar">
+                                        
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    </form>
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+        </div>
+
+        <div style="text-align: center; color: blue;">
+           
+            <h2>{{msg}}</h2>
+
+
+        </div>
+
+        </div>
+
+        
+    
+{% endblock  %}

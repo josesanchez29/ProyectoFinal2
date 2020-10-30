@@ -1,0 +1,64 @@
+
+
+
+
+ 
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+
+        <!-- SERVICIOS -->
+        <section class="servicios">
+            <div class="contenedor">
+                <h1 class="titulo">¡¡¡ NUESTROS SERVICIOS !!!</h1>
+                <div class="servicios-cont">
+                    <div class="servicio-individual">
+                        <img src="{% static 'img/servicio 1.png' %}" alt="">
+                        <h3>Lavado Exterior</h3>
+                        <h1><marquee> $7.000 </marquee></h1>
+                        <p>lavamos la parte exterior de su auto con los implementos de la mejor calidad, porterior al
+                            lavado suministramos cera para dar un brillo radiante a su vehiculo</p>
+                    </div>
+                    <div class="servicio-individual">
+                        <img src="{% static 'img/servicio 2.png' %}" alt="">
+                        <h3>Lavado Interior</h3>
+                        <h1><marquee> $8.000 </marquee></h1>
+                        <p>gracias a nuestra aspiradora industrial, aspiramos por completo el tapiz de su auto,
+                            aplicamos renovador a las gomas de su auto, y como si esto fuera poco aplicamos silicona al
+                            tablero u otros lugares que lo necesite</p>
+                    </div>
+                    <div class="servicio-individual">
+                        <img src="{% static 'img/servicio 3.png' %}" alt="">
+                        <h3>Lavado Full</h3>
+                        <h1><marquee> $14.000 </marquee></h1>
+                        <p>La union perfecta, los 2 lavados anteriores unidos, limpieza detallista y garantizada</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CLIENTES -->
+        <div class="contenedor">
+            <div class="contenedor-clientes">
+                <h2 class="titulo"> ¿QUE DICEN NUESTROS CLIENTES?</h2>
+                <div class="cards">
+                    <div class="card">
+                        <img src="{% static 'img/cara 1.jpg '%}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Javiera Riquelme</h4>
+                            <p>Lejos el mejor lavado de autos de chile, excelente experiencia 100% recomendable</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="{% static 'img/cara 2.jpg '%}" alt="">
+                        <div class="contenido-texto-card">
+                            <h4>Carlos Molina</h4>
+                            <p>Super buena atencion y mi mercedes benz quedo muy limpio. ¡MUY BUEN PRECIO!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock  %}
+    

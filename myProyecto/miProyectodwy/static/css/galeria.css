@@ -1,0 +1,33 @@
+body {
+    font-family: cursive;
+}
+
+
+.galeria img {
+    
+    border: solid lightblue;
+    margin-top: 30px;
+    transition: 1s;
+    padding: 30px;
+    width: 320px;
+  
+   
+}
+
+.galeria img:hover {
+    filter: grayscale(100%);
+    transform: scale(1.1);
+}
+
+.titulogaleria
+{
+    margin-top: 30px;
+    background-color: cadetblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    border-bottom: solid 4px black;
+    border-top-left-radius: 0px;
+    border-bottom-right-radius: 70px;
+}

@@ -1,0 +1,76 @@
+
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+        <!-- FORMULARIO -->
+        <div class="contenedor">
+
+
+            <!--CONTENIDO DE LA PAGINA-->
+            <div id="contenido">
+                <!--SECCIONES-->
+                <div id="section2">
+                <h2 class="formulariotitulo"> listado de insumos </h2>
+                {% csrf_token %}
+                <script>
+                    function eliminar(insumo) {
+                        var msg;
+                        var opcion = confirm("¿Desea eliminar el producto " + insumo + "?")
+                        if (opcion == true) 
+                        {
+                            location.href = '/eliminar_in/' + insumo + '/';                             
+                        } 
+                        else 
+                        {
+                            msg="Cancelar";  
+                            alert(msg);
+                        }
+                        
+                    }
+                function actualizar(insumo) {
+                   location.href = '/buscar/' + insumo + '/';
+                }
+
+                </script>
+                    <table style="margin: auto;" border="1"  >
+                          <tr style="background-color: teal; color: white; text-align: center;">
+                              <td>NOMBRE</td>
+                              <td>PRECIO</td>
+                              <td>DESCRIPCIÓN</td>
+                              <td>STOCK</td>
+                              <td>OPERACIONES</td>
+                           </tr>
+                        {% for item in lista_insumos %}
+                        <tr style="text-align: center;" >
+                       
+                            <td>{{item.nombre}}</td>
+                            <td>{{item.precio}}</td>
+                            <td>{{item.descripcion}}</td>
+                            <td>{{item.stock}}</td>
+                            <td>
+                                <input type="button" value="Eliminar" onclick="eliminar('{{item.nombre}}')" class="botonregistrar" style="background-color: red;" >  
+                                <input type="button" value="Actualizar" onclick="actualizar('{{item.nombre}}')" class="botonregistrar"  >  
+                                </td>
+                        
+                        </tr>
+                        {% endfor %}
+                    </table>
+                    <script>
+
+                        function ir()
+                        {
+                            location.href='/formulario_insumos/';
+                        }
+                    </script>
+                    <input type="button" onclick="ir()" value="Agregar Insumo" class="botonlimpiar" style="float: right; " >
+                </div>
+            </div>
+        </div>
+   
+     <div style="text-align: center; color: blue;">
+           
+            <h2>{{msg}}</h2>
+
+
+        </div>
+{% endblock  %}

@@ -1,0 +1,89 @@
+
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+        <!-- FORMULARIO -->
+        <div class="contenedor">
+
+
+            <!--CONTENIDO DE LA PAGINA-->
+            <div id="contenido">
+                <!--SECCIONES-->
+                <div id="section2">
+
+                    <div>
+                       
+                        
+                        <form action="" method="POST" >
+                        {% csrf_token %}
+
+                            <h2 class="formulariotitulo"> Formulario de Login</h2>
+
+                            <div class="contenedorinput">
+
+                                
+                               
+                               
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="text" name="txtnombreusuario" 
+                                            placeholder="Ingrese Su Nombre De Usuario" required>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    
+                                    <td>
+                                        <input class="col-100" type="password" name="txtcontraseña1" 
+                                            placeholder="Ingrese Contraseña" required>
+                                    </td>
+                                </tr>
+
+                               
+
+                                <tr>
+                                    <td>
+                                        <input type="submit" value="Enviar" class="botonregistrar">
+                                        <input type="reset" value="Limpiar" class="botonlimpiar">
+                                        
+                                    </td>
+                                    <td></td>
+                                </tr>
+
+                            </div>
+                        </form>
+
+
+                    </div>
+
+                    </form>
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+        </div>
+
+
+        </div>
+
+        <div style="text-align: center; color: blue;">
+            <h2>{{msg}}</h2>
+
+
+        </div>
+
+        </div>
+
+        
+    
+{% endblock  %}

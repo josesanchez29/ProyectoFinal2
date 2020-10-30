@@ -1,0 +1,95 @@
+
+{% extends "web/plantilla.html" %}
+{% load static%}
+{% block contenido %}
+        <!-- FORMULARIO -->
+        <div class="contenedor">
+
+
+            <!--CONTENIDO DE LA PAGINA-->
+            <div id="contenido">
+                <!--SECCIONES-->
+                <div id="section2">
+
+                    <div>
+
+                        <script src="{%static 'js/script.js' %}"></script>
+
+                        <form action="{% url 'FORMULARIOINSUMOS' %}" method="POST" class="formularioregistro" onsubmit="return validarPrecio()">
+                            {% csrf_token %}
+                            <h2 class="formulariotitulo"> Registra Los Insumos De La Empresa</h2>
+
+                            <div class="contenedorinput">
+
+
+                                <tr>
+                                    <td> <input class="col-100" type="text"  name="txtnombre" minlength="3"
+                                            maxlength="120" placeholder="Ingrese Nombre" required>
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td> <input class="col-100" type="number"  name="txtprecio" id="txtprecio" minlength="1"
+                                            maxlength="10" placeholder="Ingrese Precio" required> </td>
+                                </tr>
+
+
+                                <tr>
+                                    <td> <input class="col-101" type="text"  name="txtdescripcion" minlength="3"
+                                            maxlength="200" placeholder="Ingrese Descripcion (opcional)"> </td>
+                                </tr>
+
+
+                                
+                                <tr>
+                                    <td> <input class="col-101" type="text"  name="txtstock" 
+                                            maxlength="200" placeholder="Ingrese Stock"> </td>
+                                </tr>
+
+
+
+                                <td>
+                                    <script>
+
+                                        function ir()
+                                        {
+                                            location.href='/lista_insumos/';
+                                        }
+                                    </script>
+
+
+                                    <input type="submit" value="Registrar" class="botonregistrar">
+                                    <input type="reset" value="limpiar" class="botonlimpiar">
+                                    <input type="button" onclick="ir()" value="Listado Insumos" class="botonlimpiar">
+                                </td>
+
+                            </div>
+
+                        </form>
+
+                       
+
+
+                    </div>
+
+
+                </div>
+
+
+
+
+            </div>
+
+
+        </div>
+
+
+
+        </div>
+ 
+    </main>
+    <div style="text-align: center; color: blue;">
+      <h2>  {{msg}} </h2>
+    </div>
+    
+{% endblock  %}
