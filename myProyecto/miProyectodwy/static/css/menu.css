@@ -64,6 +64,8 @@ header {
 
 /* RESPONSIVIDAD */
 @media screen and (max-width:900px) {
+
+    
     .icon-menu {
         display: block;
         color: white;
@@ -101,10 +103,14 @@ header {
         
     }
 
-    .bienvenida{
-        float: left;
-    }
 
-    
+}
+
+@media screen and (max-width:1200px) {
+
+   .img-logo
+    {
+        display: none;
+    }
 
 }

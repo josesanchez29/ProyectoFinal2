@@ -59,10 +59,13 @@
               
               
                  
+                
                 {% if user.is_authenticated %}
                 <li><h3 style="text-align: center; ; color: white; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; ">Bienvenido: {{user.first_name}} {{user.last_name}}</h3></li>
                 {% endif %}
+               
                 
+
                 <li><a href="{% url 'INDEX' %}">Inicio</a></li>
                 <li><a href="{% url 'MISIONVISION' %}">Misión / Visión</a></li>
                 <li><a href="{% url 'UBICACION' %}">Ubicación</a></li>
@@ -76,6 +79,7 @@
                 {% else %}
                 <li><a href="{% url 'LOGIN' %}">Login</a></li>
                 {% endif %}
+                 
                 
                 
                 
@@ -84,7 +88,7 @@
                 
             </ul>
              
-             
+                
             
                
         </nav>

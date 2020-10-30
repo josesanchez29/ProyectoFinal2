@@ -106,5 +106,27 @@ input
         margin: auto;
         margin-bottom: 12px;
       }
+
+    .tablainsumos
+    {
+        width: 100%;
+    }
+
+    
 }
+
+   @media screen and (max-width:30em) {/* x 16px = 480px */
+
+    table{
+        width: 100%;
+    }
+    table tr{
+        display: flex;
+        flex-direction: column;
+        border: 1px solid;
+        padding: lem;
+    }
+
+    }
+
 
