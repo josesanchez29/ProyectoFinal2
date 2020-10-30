@@ -40,7 +40,7 @@ class TestInsumos(unittest.TestCase):
 
 class TestUsuario(unittest.TestCase):
    
-      def test_login(self):
+    def test_login(self):
        usu = authenticate( username='auto', password='auto')
        if usu is not None and usu.is_active:
             assert True
