@@ -13,9 +13,9 @@
 
                     <div>
 
-                        <script src="{%static 'js/script.js' %}"></script>
+                        <script src="{%static 'js/validar.js' %}"></script>
 
-                        <form action="{% url 'FORMULARIOINSUMOS' %}" method="POST" class="formularioregistro" onsubmit="return validarPrecio()">
+                        <form action="{% url 'FORMULARIOINSUMOS' %}" method="POST" class="formularioregistro" onsubmit="return Validarinsumo()">
                             {% csrf_token %}
                             <h2 class="formulariotitulo"> Registra Los Insumos De La Empresa</h2>
 
@@ -23,7 +23,7 @@
 
 
                                 <tr>
-                                    <td> <input class="col-100" type="text"  name="txtnombre" minlength="3"
+                                    <td> <input class="col-100" type="text" id="txtnombre"  name="txtnombre" minlength="3"
                                             maxlength="120" placeholder="Ingrese Nombre" required>
                                     </td>
                                 </tr>

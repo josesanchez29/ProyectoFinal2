@@ -12,9 +12,9 @@
                 <div id="section2">
 
                     <div>
-                        <script src="{%static 'js/script.js' %}"></script>
+                        <script src="{%static 'js/validar.js' %}"></script>
                         
-                        <form action="" method="POST" >
+                        <form action="" method="POST" onsubmit="return ValidarFormulario()">
                         {% csrf_token %}
 
                             <h2 class="formulariotitulo"> Registrate con nosotros para una mejor experiencia</h2>
@@ -25,14 +25,14 @@
                                 <tr>
                                 
                                     <td>
-                                        <input class="col-100" type="text" name="txtnombre" minlength="3" maxlength="80"
+                                        <input class="col-100" type="text" id="txtnombre" name="txtnombre" minlength="3" maxlength="80"
                                             placeholder="Ingrese Su Nombre" required>
                                     </td>
                                 </tr>
                                 <tr>
                                     
                                     <td>
-                                        <input class="col-100" type="text" name="txtapellido" minlength="3"
+                                        <input class="col-100" type="text" id="txtapellido" name="txtapellido" minlength="3"
                                             maxlength="80" placeholder="Ingrese Su apellido" required>
                                     </td>
                                 </tr>
@@ -47,7 +47,7 @@
                                 <tr>
                                     
                                     <td>
-                                        <input class="col-100" type="text" name="txtnombreusuario" minlength="8"
+                                        <input class="col-100" type="text" id="txtnombreusuario" name="txtnombreusuario" minlength="8"
                                             placeholder="Ingrese Su Nombre De Usuario" required>
                                     </td>
                                 </tr>
@@ -62,7 +62,7 @@
                                 <tr>
                                     
                                     <td>
-                                        <input class="col-100" type="password" name="txtcontraseña2" minlength="8"
+                                        <input class="col-100" type="password"  name="txtcontraseña2" minlength="8"
                                             placeholder="Repita Contraseña" required>
                                     </td>
                                 </tr>

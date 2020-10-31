@@ -221,7 +221,7 @@ def login(request):
             
         else:
             sliders = Slider1.objects.all()
-            return render(request,'web/login.html',{'msg': 'No existe usuario'},{'imagenes':sliders}) 
+            return render(request,'web/login.html',{'msg': 'No existe usuario','imagenes':sliders}) 
 
     sliders = Slider1.objects.all()   
     return render(request,'web/login.html',{'imagenes':sliders})
